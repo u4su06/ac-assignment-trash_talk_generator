@@ -1,0 +1,74 @@
+<!-- ./view/index.handlebars -->
+<div class="container py-5">
+  <div class="row">
+    <div class="col-12 col-lg-10 col-xl-8 mx-auto">
+      <div class="text-center mb-5">
+        <h1>你想對誰說幹話？</h1>
+      </div>
+
+      <form method="POST" action="/">
+        <div class="row">
+          <div class="col-4">
+            <div class="card">
+              <div class="radio">
+                <label>
+                  <img class="card-img-top"
+                    src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg"
+                    alt="engineer" style="max-width: 100%;">
+                  <div class="card-body text-center">
+                    <input type="radio" class="form-check-input mr-1" id="" name="career" value="engineer" {{#if
+                      career.engineer}}checked{{/if}}>工程師
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-4">
+            <div class="card">
+              <div class="radio">
+                <label>
+                  <img class="card-img-top"
+                    src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg"
+                    alt="designer" style="max-width: 100%;">
+                  <div class="card-body text-center">
+                    <input type="radio" class="mr-1" id="" name="career" value="designer" {{#if
+                      career.designer}}checked{{/if}}>設計師
+                  </div>
+                </label>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-4">
+            <div class="card">
+              <div class="radio">
+                <label>
+                  <img class=""
+                    src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg"
+                    alt="entrepreneur" style="max-width: 100%;">
+                  <div class="card-body text-center">
+                    <input type="radio" class="mr-1" id="" name="career" value="entrepreneur" {{#if
+                      career.entrepreneur}}checked{{/if}}>創業家
+                  </div>
+                </label>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-12 mt-5">
+            <div class="row">
+              <div class="col-1">
+                <button class="btn btn-danger" type="submit"><i class="fas fa-bullhorn"></i></button>
+              </div>
+              <div class="col-11">
+                <textarea class="text-center" name="" id="" cols="92" rows="" placeholder="........#$%!@#$)%^&*($%!!&*"
+                  style="background-color: white;" disabled>{{#if trashTalk}}{{trashTalk}}{{/if}}</textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
